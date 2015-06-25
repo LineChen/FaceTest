@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/bt_GetImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="GetImage" />
+
+    <Button
+        android:id="@+id/bt_Detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/bt_GetImage"
+        android:text="Detect" />
+
+    <TextView
+        android:id="@+id/tv_Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/bt_Detect"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/bt_Detect"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/iv_Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bt_Detect"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/t4" />
+
+    <FrameLayout
+        android:id="@+id/fl_Waiting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pb_waiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_age_and_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:drawableLeft="@drawable/male"
+            android:textColor="#ffff00ff"
+            android:textSize="22sp"
+            android:text="20"
+            android:visibility="invisible"
+            android:gravity="center_vertical" />
+    </FrameLayout>
+
+</RelativeLayout>
